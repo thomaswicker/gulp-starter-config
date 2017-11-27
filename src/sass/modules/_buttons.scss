@@ -1,0 +1,521 @@
+/*
+  ____  _   _ _____ _____ ___  _   _ ____
+ | __ )| | | |_   _|_   _/ _ \| \ | / ___|
+ |  _ \| | | | | |   | || | | |  \| \___ \
+ | |_) | |_| | | |   | || |_| | |\  |___) |
+ |____/ \___/  |_|   |_| \___/|_| \_|____/
+*/
+
+/* ==========================================================================
+   %% Styling for Standard Buttons %%
+   ========================================================================== */
+
+.btn, .button, button {
+  float: left;
+  display: block;
+  min-width: $unit-jumbo;
+  padding: $unit $unit-md;
+  border: 2px solid $color-primary;
+  border-radius: 0;
+  font-family: $font-1;
+  font-size: $font-size;
+  font-weight: 500;
+  text-align: center;
+  background: $color-primary;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: all .3s ease;
+
+  @include mq(sm) {
+    width: 100%;
+  }
+
+  &:hover {
+    border: 2px solid darken($color-primary, 15%);
+    background: darken($color-primary, 15%);
+  }
+
+  // primary button
+  &.btn-primary {
+    border: 2px solid $color-primary;
+    background: $color-primary;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($color-primary, 15%);
+      background: darken($color-primary, 15%);
+    }
+  }
+
+  // secondary button
+  &.btn-secondary {
+    border: 2px solid $color-secondary;
+    background: $color-secondary;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($color-secondary, 15%);
+      background: darken($color-secondary, 15%);
+    }
+  }
+
+  // red button
+  &.btn-red {
+    border: 2px solid $red-potion;
+    background: $red-potion;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($red-potion, 15%);
+      background: darken($red-potion, 15%);
+    }
+  }
+
+  // green button
+  &.btn-green {
+    border: 2px solid $green-potion;
+    background: $green-potion;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($green-potion, 15%);
+      background: darken($green-potion, 15%);
+    }
+  }
+
+  // blue button
+  &.btn-blue {
+    border: 2px solid $blue-potion;
+    background: $blue-potion;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($blue-potion, 15%);
+      background: darken($blue-potion, 15%);
+    }
+  }
+
+  // orange button
+  &.btn-orange {
+    border: 2px solid $orange-potion;
+    background: $orange-potion;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($orange-potion, 15%);
+      background: darken($orange-potion, 15%);
+    }
+  }
+
+  // purple button
+  &.btn-purple {
+    border: 2px solid $purple-potion;
+    background: $purple-potion;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($purple-potion, 15%);
+      background: darken($purple-potion, 15%);
+    }
+  }
+
+  // dark gray button
+  &.btn-dark {
+    border: 2px solid $dark-gray;
+    background: $dark-gray;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($dark-gray, 15%);
+      background: darken($dark-gray, 15%);
+    }
+  }
+
+  // light gray button
+  &.btn-gray {
+    border: 2px solid $light-gray;
+    background: $light-gray;
+    color: $white;
+
+    &:hover {
+      border: 2px solid darken($light-gray, 15%);
+      background: darken($light-gray, 15%);
+    }
+  }
+
+  // grayed out/inactive button state
+  &:disabled,
+  &.js-disabled,
+  &.btn-disabled {
+    cursor: default;
+    background: $light-gray !important;
+    color: $off-white;
+    pointer-events: none;
+  }
+
+  &.btn-inline {
+    padding: 0;
+    background-color: transparent;
+    color: $orange-potion;
+    border: 0;
+
+    &:hover {
+      color: darken($orange-potion, 20%);
+    }
+  }
+
+  // creates a small size button
+  &.btn-small {
+    min-width: 0;
+    padding: .75rem 1.25rem;
+    @include font($font: $font-1, $style: normal, $size: $font-size-sm, $weight: 500);
+  }
+
+  // creates a miniature size button
+  &.btn-mini {
+    min-width: 0;
+    padding: 7px 14px;
+    @include font($font: $font-1, $style: normal, $size: 12px, $weight: 500);
+  }
+
+  // creates a small size button
+  &.btn-small {
+    min-width: 0;
+    padding: $unit-sm $unit-sm;
+    @include font($font: $font-1, $style: normal, $size: $font-size-base, $weight: 500);
+  }
+
+  // button that spans/fills the width of the container
+  &.btn-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  // double width standard button
+  &.btn-wide {
+    min-width: 0;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+    @include font($font: $font-1, $style: normal, $size: $font-size, $weight: normal);
+  }
+}
+
+
+/* ==========================================================================
+   %% Styling for Outlined Buttons %%
+   ========================================================================== */
+
+.btn-outline {
+  background: $white;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+
+  &:hover {
+    border: 2px solid darken($color-primary, 15%);
+    background-color: darken($color-primary, 15%);
+    color: $white;
+  }
+
+  // secondary outlined button
+  &.btn-secondary {
+    border: 2px solid $color-secondary;
+    color: $color-secondary;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($color-secondary, 15%);
+      background-color: darken($color-secondary, 15%);
+      color: $white;
+    }
+  }
+
+  // red outlined button
+  &.btn-red {
+    border: 2px solid $red-potion;
+    color: $red-potion;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($red-potion, 15%);
+      background-color: darken($red-potion, 15%);
+      color: $white;
+    }
+  }
+
+  // green outlined button
+  &.btn-green {
+    border: 2px solid $green-potion;
+    color: $green-potion;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($green-potion, 15%);
+      background-color: darken($green-potion, 15%);
+      color: $white;
+    }
+  }
+
+  // blue outlined button
+  &.btn-blue {
+    border: 2px solid $blue-potion;
+    color: $blue-potion;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($blue-potion, 15%);
+      background-color: darken($blue-potion, 15%);
+      color: $white;
+    }
+  }
+
+  // orange outlined button
+  &.btn-orange {
+    border: 2px solid $orange-potion;
+    color: $orange-potion;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($orange-potion, 15%);
+      background-color: darken($orange-potion, 15%);
+      color: $white;
+    }
+  }
+
+  &.btn-purple {
+    border: 2px solid $purple-potion;
+    color: $purple-potion;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($purple-potion, 15%);
+      background-color: darken($purple-potion, 15%);
+      color: $white;
+    }
+  }
+
+  &.btn-dark {
+    border: 2px solid $dark-gray;
+    color: $dark-gray;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($dark-gray, 15%);
+      background-color: darken($dark-gray, 15%);
+      color: $white;
+    }
+  }
+
+  &.btn-gray {
+    border: 2px solid $light-gray;
+    color: $light-gray;
+    background-color: $white;
+
+    &:hover {
+      border: 2px solid darken($light-gray, 15%);
+      background-color: darken($light-gray, 15%);
+      color: $white;
+    }
+  }
+}
+
+.btn-header {
+
+
+  @include mq(xl) {
+
+  }
+
+  @include mq(lg) {
+
+  }
+
+  @include mq(md) {
+
+  }
+
+  @include mq(sm) {
+
+  }
+}
+
+.btn-portfolio {
+  padding: 7px 10px !important;
+
+  &.btn-link--behance {
+    background-color: $purple-potion;
+    color: $white;
+    border: 1px solid $purple-potion;
+
+    &:hover {
+      background-color: lighten($purple-potion, 15%);
+      color: $white;
+      border: 1px solid lighten($purple-potion, 15%);
+    }
+  }
+
+  &.btn-link--site {
+    background-color: $blue-potion;
+    color: $white;
+    border: 1px solid $blue-potion;
+
+    &:hover {
+      background-color: darken($blue-potion, 15%);
+      color: $white;
+      border: 1px solid darken($blue-potion, 15%);
+    }
+  }
+
+  &.btn-link--github {
+    background-color: $medium-gray;
+    color: $white;
+    border: 1px solid $medium-gray;
+
+    &:hover {
+      background-color: darken($medium-gray, 15%);
+      color: $white;
+      border: 1px solid darken($medium-gray, 15%);
+    }
+  }
+}
+
+.btn-photography {
+  color: $red-potion;
+  background-color: transparent;
+  border: 1px solid $red-potion;
+
+  &:hover {
+    color: $white;
+    background-color: $red-potion;
+    border: 1px solid $red-potion;
+  }
+}
+
+.btn-resume {
+  width: 100%;
+  margin-top: $unit-sm;
+  color: $orange-potion;
+  background-color: transparent;
+  border: 1px solid $orange-potion;
+
+  &:hover {
+    color: $white;
+    background-color: $orange-potion;
+    border: 1px solid $orange-potion;
+  }
+}
+
+.btn-contact {
+  color: $yellow-potion;
+  background-color: transparent;
+  border: 1px solid $yellow-potion;
+
+  &:hover {
+    color: $white;
+    background-color: $yellow-potion;
+    border: 1px solid $yellow-potion;
+  }
+}
+
+.btn-read-more {
+  font-size: 12px;
+  margin-top: $unit-sm;
+  padding: 10px 20px;
+
+  @include mq(sm) {
+    width: 100%;
+    margin-top: $unit-xs;
+    padding: $unit-xs $unit-md;
+    font-size: 14px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-view-all {
+  float: right;
+
+  i {
+    margin-left: 3px;
+  }
+
+  @include mq(sm) {
+    float: left;
+    width: 100%;
+    margin-top: 0;
+    padding: $unit-xs $unit-md;
+    background-color: $orange-potion;
+    color: $white;
+  }
+}
+
+.back-btn {
+  position: relative;
+  top: -5px;
+  float: left;
+  margin-bottom: 20px;
+
+  i {
+    margin-right: 3px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.back-btn-search {
+  position: relative;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 0px;
+
+  i {
+    margin-right: 3px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.submit {
+  float: left;
+  display: block;
+  min-width: $unit-jumbo;
+  padding: $unit $unit-md;
+  border: 2px solid $green-potion !important;
+  border-radius: 0;
+  font-family: $font-1;
+  font-size: $font-size;
+  font-weight: 500;
+  text-align: center;
+  background: $green-potion !important;;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  transition: all .3s ease;
+  font-size: 12px;
+  margin-top: $unit-sm;
+  padding: 10px 20px;
+
+  @include mq(sm) {
+    width: 100%;
+    margin-top: $unit-xs;
+    padding: $unit-xs $unit-md;
+    font-size: 14px;
+  }
+
+  &:hover {
+    border: 2px solid lighten($green-potion, 15%) !important;
+    background-color: lighten($green-potion, 15%) !important;;
+    text-decoration: none;
+  }
+}

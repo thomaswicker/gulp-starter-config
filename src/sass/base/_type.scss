@@ -1,0 +1,233 @@
+/*
+_______   ______  _____
+|_   _\ \ / /  _ \| ____|
+| |  \ V /| |_) |  _|
+| |   | | |  __/| |___
+|_|   |_| |_|   |_____|
+*/
+
+
+.uppercase { text-transform: uppercase !important; }
+.lowercase { text-transform: uppercase !important; }
+
+.font-1 {
+  font-family: $font-1;
+}
+
+.font-2 {
+  font-family: $font-2;
+}
+
+.font-3 {
+  font-family: $font-3;
+}
+
+.font-4 {
+  font-family: $font-4;
+}
+
+
+/* ==========================================================================
+%% Font Size Helper Classes %%
+========================================================================== */
+
+.text-xs { font-size: $font-size-tiny !important; }
+.text-sm { font-size: $font-size-sm !important; }
+.text-md { font-size: $font-size-md !important; }
+.text-lg { font-size: $font-size-lg !important; }
+.text-xl { font-size: $font-size-xl !important; }
+.text-jumbo { font-size: $font-size-jumbo !important; }
+
+
+/* ==========================================================================
+%% Font Weight Helper Classes %%
+========================================================================== */
+
+.text-thin {
+  font-weight: 200;
+}
+
+.text-normal {
+  font-weight: 300;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-ultra {
+  font-weight: 800;
+}
+
+/* ==========================================================================
+%% Font Style Helper Classes %%
+========================================================================== */
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-oblique {
+  font-style: oblique;
+}
+
+.text-inherit {
+  font-style: inherit;
+}
+
+
+/* ==========================================================================
+%% Text alignment Helper Classes %%
+========================================================================== */
+
+.text-left     { text-align: left  !important; }
+.text-center   { text-align: center!important; }
+.text-right    { text-align: right !important; }
+
+
+/* ==========================================================================
+%% Font Weight Helper Classes %%
+========================================================================== */
+
+.font-weight-light      { font-weight: 200!important; }
+.font-weight-normal     { font-weight: 300!important; }
+.font-weight-bold       { font-weight: 600!important; }
+
+
+/* ==========================================================================
+%% Font Color Helper Classes %%
+========================================================================== */
+
+.text-fire { color: $red-potion; }
+.text-earth { color: $green-potion; }
+.text-wind { color: $light-gray; }
+.text-water { color: $blue-potion; }
+
+.text-xlight { color: $light-gray; }
+.text-light { color: $light-gray; }
+.text-medium { color: $medium-gray; }
+.text-dark { color: $dark-gray; }
+
+
+/* ==========================================================================
+%% Body Text Color Helper Classes %%
+========================================================================== */
+
+.intro-text {
+  @include font($font: $font-2, $style: normal, $size: 1.3rem, $weight: $font-weight-light);
+  line-height: ($base-line-height * 1.4);
+  letter-spacing: normal;
+}
+
+.body-text {
+  float: left;
+  width: 100%;
+  margin: $unit-xs 0;
+  @include font($font: $font-2, $style: normal, $size: 17px, $weight: $font-weight-normal);
+  line-height: 135%;
+  letter-spacing: normal;
+
+  @include mq(xl) {
+    @include font($font: $font-2, $style: normal, $size: 16px, $weight: $font-weight-normal);
+    line-height: 140%;
+  }
+
+  @include mq(lg) {
+    @include font($font: $font-2, $style: normal, $size: 16px, $weight: $font-weight-normal);
+    line-height: 145%;
+  }
+
+  @include mq(md) {
+    @include font($font: $font-2, $style: normal, $size: 15px, $weight: $font-weight-normal);
+  }
+
+  @include mq(sm) {
+    @include font($font: $font-2, $style: normal, $size: 16px, $weight: $font-weight-normal);
+  }
+}
+
+.body-text-small {
+  @include font($font: $font-1, $style: normal, $size: $body-text-small, $weight: $font-weight-normal);
+  line-height: $base-line-height;
+  letter-spacing: normal;
+  margin-bottom: 1.1em;
+}
+
+.body-text-large {
+  @include font($font: $font-1, $style: normal, $size: $body-text-large, $weight: $font-weight-normal);
+  line-height: $base-line-height;
+  letter-spacing: normal;
+  margin-bottom: 1.1em;
+}
+
+
+/* ==========================================================================
+%% Font Color Helper Classes %%
+========================================================================== */
+
+.text-color {
+
+  &.none {
+    color: $none;
+  }
+
+  &.white {
+    color: $white;
+  }
+
+  &.off-white {
+    color: $off-white;
+  }
+
+  &.xlight-gray {
+    color: $xlight-gray;
+  }
+
+  &.light-gray {
+    color: $light-gray;
+  }
+
+  &.medium-gray {
+    color: $medium-gray;
+  }
+
+  &.dark-gray {
+    color: $dark-gray;
+  }
+
+  &.black {
+    color: $black;
+  }
+
+  &.primary {
+    color: $color-primary;
+  }
+
+  &.secondary {
+    color: $color-secondary;
+  }
+
+  &.red-potion {
+    color: $red-potion;
+  }
+
+  &.green-potion {
+    color: $green-potion;
+  }
+
+  &.blue-potion {
+    color: $blue-potion;
+  }
+
+  &.orange-potion {
+    color: $orange-potion;
+  }
+
+  &.yellow-potion {
+    color: $yellow-potion;
+  }
+
+  &.purple-potion {
+    color: $purple-potion;
+  }
+}

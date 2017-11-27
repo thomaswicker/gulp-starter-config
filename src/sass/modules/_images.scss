@@ -1,0 +1,76 @@
+/*
+  ___ __  __    _    ____ _____ ____
+ |_ _|  \/  |  / \  / ___| ____/ ___|
+  | || |\/| | / _ \| |  _|  _| \___ \
+  | || |  | |/ ___ \ |_| | |___ ___) |
+ |___|_|  |_/_/   \_\____|_____|____/
+*/
+
+/* ==========================================================================
+   %% Image Styles %%
+   ========================================================================== */
+
+.img-round {
+  @include border-radius(50%);
+
+  @include mq (sm) {
+    width: 80%;
+  }
+}
+
+.img-round-thumbnail {
+  @include border-radius(50%);
+
+  border: 1px solid $light-gray;
+  padding: .8em;
+
+  @include mq (sm) {
+    width: 80%;
+  }
+}
+
+.img-square {
+  border: 3px solid $black;
+
+  @include mq (sm) {
+    width: 80%;
+  }
+}
+
+.img-square-thumbnail {
+  border: 1px solid $light-gray;
+  padding: .8em;
+
+  @include mq (sm) {
+    width: 80%;
+  }
+}
+
+/* ==========================================================================
+   %% Image Placement %%
+   ========================================================================== */
+
+.img-right{
+    float:right;
+    @include margin(0em 0em 1em 1em);
+}
+
+.img-left{
+    float:left;
+    @include margin(0em 1em 1em 0em);
+}
+
+.img-center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* ==========================================================================
+   %% Images in Figures %%
+   ========================================================================== */
+
+figure > img{
+    display:block;
+}

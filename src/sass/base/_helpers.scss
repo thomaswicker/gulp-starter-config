@@ -1,0 +1,261 @@
+/*
+  _   _ _____ _     ____  _____ ____  ____
+ | | | | ____| |   |  _ \| ____|  _ \/ ___|
+ | |_| |  _| | |   | |_) |  _| | |_) \___ \
+ |  _  | |___| |___|  __/| |___|  _ < ___) |
+ |_| |_|_____|_____|_|   |_____|_| \_\____/
+*/
+
+
+/* ==========================================================================
+   %% Float Helpers %%
+   ========================================================================== */
+
+.float-left    { float: left !important; }
+.float-right   { float: right !important; }
+.float-none    { float: none !important; }
+
+
+/* ==========================================================================
+   %% Border Helpers %%
+   ========================================================================== */
+
+.border {
+  // Positions
+  &.top       { border-top-style: solid; }
+  &.right     { border-right-style: solid; }
+  &.bottom    { border-bottom-style: solid; }
+  &.left      { border-left-style: solid; }
+  &.all       { border-style: solid; }
+
+  // thicknesses
+  &.none      { border-width: rem-calc(0); }
+  &.xs        { border-width: rem-calc(1); }
+  &.sm        { border-width: rem-calc(2); }
+  &.md        { border-width: rem-calc(3); }
+  &.lg        { border-width: rem-calc(4); }
+  &.xl        { border-width: rem-calc(5); }
+
+  // Palettes
+  &.dark      { border-color: $dark-gray; }
+  &.medium    { border-color: $medium-gray; }
+  &.light     { border-color: $light-gray; }
+  &.xlight    { border-color: $off-white; }
+}
+
+
+/* ==========================================================================
+   %% Shim Helpers for Padding %%
+   ========================================================================== */
+
+.shim {
+  &.top {
+    &.none    { padding-top: 0em; }
+    &.xs      { padding-top: $unit-xs; }
+    &.sm      { padding-top: $unit-sm; }
+    &.md      { padding-top: $unit-md; }
+    &.lg      { padding-top: $unit-lg; }
+    &.xl      { padding-top: $unit-xl; }
+    &.jumbo   { padding-top: $unit-jumbo; }
+  }
+
+  &.right {
+    &.none    { padding-right: 0em; }
+    &.xs      { padding-right: $unit-xs; }
+    &.sm      { padding-right: $unit-sm; }
+    &.md      { padding-right: $unit-md; }
+    &.lg      { padding-right: $unit-lg; }
+    &.xl      { padding-right: $unit-xl; }
+    &.jumbo   { padding-right: $unit-jumbo; }
+  }
+
+  &.bottom {
+    &.none    { padding-bottom: 0em; }
+    &.xs      { padding-bottom: $unit-xs; }
+    &.sm      { padding-bottom: $unit-sm; }
+    &.md      { padding-bottom: $unit-md; }
+    &.lg      { padding-bottom: $unit-lg; }
+    &.xl      { padding-bottom: $unit-xl; }
+    &.jumbo   { padding-bottom: $unit-jumbo; }
+  }
+
+  &.left {
+    &.none    { padding-left: 0em; }
+    &.xs      { padding-left: $unit-xs; }
+    &.sm      { padding-left: $unit-sm; }
+    &.md      { padding-left: $unit-md; }
+    &.lg      { padding-left: $unit-lg; }
+    &.xl      { padding-left: $unit-xl; }
+    &.jumbo   { padding-left: $unit-jumbo; }
+  }
+
+  &.all {
+    &.none    { padding: 0em; }
+    &.xs      { padding: $unit-xs; }
+    &.sm      { padding: $unit-sm; }
+    &.md      { padding: $unit-md; }
+    &.lg      { padding: $unit-lg; }
+    &.xl      { padding: $unit-xl; }
+    &.jumbo   { padding: $unit-jumbo; }
+  }
+}
+
+
+/* ==========================================================================
+   %% Margin Helpers %%
+   ========================================================================== */
+
+.margin {
+  &.top {
+    &.none   { margin-top: 0em; }
+    &.xs     { margin-top: $unit-xs; }
+    &.sm     { margin-top: $unit-sm; }
+    &.md     { margin-top: $unit-md; }
+    &.lg     { margin-top: $unit-lg; }
+    &.xl     { margin-top: $unit-xl; }
+    &.jumbo  { margin-top: $unit-jumbo; }
+  }
+
+  &.right {
+    &.none   { margin-right: 0em; }
+    &.xs     { margin-right: $unit-xs; }
+    &.sm     { margin-right: $unit-sm; }
+    &.md     { margin-right: $unit-md; }
+    &.lg     { margin-right: $unit-lg; }
+    &.xl     { margin-right: $unit-xl; }
+    &.jumbo  { margin-right: $unit-jumbo; }
+  }
+
+  &.bottom {
+    &.none   { margin-bottom: 0em; }
+    &.xs     { margin-bottom: $unit-xs; }
+    &.sm     { margin-bottom: $unit-sm; }
+    &.md     { margin-bottom: $unit-md; }
+    &.lg     { margin-bottom: $unit-lg; }
+    &.xl     { margin-bottom: $unit-xl; }
+    &.jumbo  { margin-bottom: $unit-jumbo; }
+  }
+
+  &.left {
+    &.none   { margin-left: 0em; }
+    &.xs     { margin-left: $unit-xs; }
+    &.sm     { margin-left: $unit-sm; }
+    &.md     { margin-left: $unit-md; }
+    &.lg     { margin-left: $unit-lg; }
+    &.xl     { margin-left: $unit-xl; }
+    &.jumbo  { margin-left: $unit-jumbo; }
+  }
+}
+
+
+/* ==========================================================================
+   %% Push and Pull Helpers %%
+   ========================================================================== */
+
+.full-bleed{
+    margin-right:-$unit-base !important;
+    margin-left: -$unit-base !important;
+
+    .islet &{
+        margin-right:-$half-unit-base !important;
+        margin-left: -$half-unit-base !important;
+    }
+}
+
+
+/* ==========================================================================
+   %% Background Color Helpers %%
+   ========================================================================== */
+
+// Mute an object by reducing its opacity.
+.muted {
+    opacity:0.5!important;
+    filter:alpha(opacity = 50)!important;
+}
+
+
+/* ==========================================================================
+   %% Background Style Helpers %%
+   ========================================================================== */
+
+.bg-color {
+  &.none {
+    background-color: transparent;
+  }
+
+  &.white {
+    background-color: $white;
+  }
+
+  &.off-white {
+    background-color: $off-white;
+  }
+
+  &.xxlight-gray {
+    background-color: $xxlight-gray;
+  }
+
+  &.xlight-gray {
+    background-color: $xlight-gray;
+  }
+
+  &.light-gray {
+    background-color: $light-gray;
+  }
+
+  &.gray {
+    background-color: $gray;
+  }
+
+  &.medium-gray {
+    background-color: $medium-gray;
+  }
+
+  &.dark-gray {
+    background-color: $dark-gray;
+  }
+
+  &.xdark-gray {
+    background-color: $xdark-gray;
+  }
+
+  &.xxdark-gray {
+    background-color: $xxdark-gray;
+  }
+
+  &.black {
+    background-color: $black;
+  }
+
+  &.primary {
+    background-color: $color-primary;
+  }
+
+  &.secondary {
+    background-color: $color-secondary;
+  }
+
+  &.red-potion {
+    background-color: $red-potion;
+  }
+
+  &.green-potion {
+    background-color: $green-potion;
+  }
+
+  &.blue-potion {
+    background-color: $blue-potion;
+  }
+
+  &.orange-potion {
+    background-color: $orange-potion;
+  }
+
+  &.yellow-potion {
+    background-color: $yellow-potion;
+  }
+
+  &.purple-potion {
+    background-color: $purple-potion;
+  }
+}

@@ -1,0 +1,200 @@
+/*
+ __     ___    ____  ___    _    ____  _     _____ ____
+ \ \   / / \  |  _ \|_ _|  / \  | __ )| |   | ____/ ___|
+  \ \ / / _ \ | |_) || |  / _ \ |  _ \| |   |  _| \___ \
+   \ V / ___ \|  _ < | | / ___ \| |_) | |___| |___ ___) |
+    \_/_/   \_\_| \_\___/_/   \_\____/|_____|_____|____/
+*/
+
+
+/* ==========================================================================
+   %% Import your fonts here %%
+   ========================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+
+/* ==========================================================================
+   %% Global Color Palette %%
+   ========================================================================== */
+
+// Generic monochrome colors
+$none:              transparent;
+$white:             #ffffff;
+$off-white:         #f4f4f4;
+$xxlight-gray:      #dddddd;
+$xlight-gray:       #cccccc;
+$light-gray:        #bbbbbb;
+$gray:              #999999;
+$medium-gray:       #777777;
+$dark-gray:         #444444;
+$xdark-gray:        #222222;
+$xxdark-gray:       #111111;
+$black:             #000000;
+
+// Standard color palette
+$red-potion:        #E90000;
+$green-potion:      #85b933;
+$blue-potion:       #2a98c6;
+$teal-potion:       #0DABA7;
+$orange-potion:     #f57e20;
+$yellow-potion:     $teal-potion;
+$purple-potion:     #a06eaf;
+
+// Set your global app/site variables here
+$color-primary:     $blue-potion;
+$color-primary-alt: #006EA2;
+$color-secondary:   $green-potion;
+
+// Element color styling variables
+$link:              $color-secondary;
+$text:              $dark-gray;
+
+
+/* ==========================================================================
+   %% Typography Variables %%
+   ========================================================================== */
+
+//global font varaibles
+
+$base-line-height: 135%;
+
+// font weights
+$font-weight-xlight:   200;
+$font-weight-light:    300;
+$font-weight-normal:   400;
+$font-weight-semibold: 500;
+$font-weight-bold:     600;
+$font-weight-ultra:    800;
+
+//font sizes
+$font-size-tiny:       8px;
+$font-size-xxs:        10px;
+$font-size-xs:         11px;
+$font-size-sm:         12px;
+$font-size-base:       13px;
+$font-size-md:         14px;
+$font-size-lg:         15px;
+$font-size-xl:         20px;
+$font-size-xxl:        24px;
+$font-size-jumbo:      30px;
+
+$font-size: $font-size-base;
+
+//Font Family Variables
+
+//custom font family
+$font-1: 'Roboto', sans-serif;
+
+//base san-serif font family
+$font-2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+//secondary custom font family
+$font-3: 'Roboto Slab', serif;
+
+//often used for code blocks
+$font-4: FontAwesome;
+
+$body-text: $font-size-md;
+$body-text-small: $font-size-sm;
+$body-text-large: $font-size-lg;
+
+
+/* ==========================================================================
+   %% Headers h1,h2,h3,h4,h5,h6 %%
+   ========================================================================== */
+
+$h1-size: 50px;
+$h2-size: 40px;
+$h3-size: $font-size-lg;
+$h4-size: $font-size-md;
+$h5-size: $font-size-base;
+$h6-size: $font-size-xs;
+
+
+/* ==========================================================================
+   %% Spacing Units %%
+   ========================================================================== */
+
+
+$unit-tiny:   2px;
+$unit-xxs:    5px;
+$unit-xs:     10px;
+$unit-sm:     15px;
+$unit-base:   20px;
+$unit-md:     25px;
+$unit-lg:     30px;
+$unit-xl:     35px;
+$unit-xxl:    50px;
+$unit-jumbo:  75px;
+
+$half-unit-base: $unit-base / 2;
+$unit: $unit-base;
+$base-unit: $unit-base;
+
+/* ==========================================================================
+   %% Grid  Variables %%
+   ========================================================================== */
+
+$grid-cols: 12;
+$gutter-width: 20px;
+$grid-max-width: 100%;
+
+
+/* ==========================================================================
+   %% Border Radius %%
+   ========================================================================== */
+
+$border-radius: 0;
+
+/* ==========================================================================
+   %% Button Variables %%
+   ========================================================================== */
+
+$button-primary:   $color-primary;
+$button-secondary: $color-secondary;
+$button-red:       $red-potion;
+$button-green:     $green-potion;
+$button-gray:      $xlight-gray;
+$button-blue:      $blue-potion;
+$button-dark:      $dark-gray;
+$button-orange:    $orange-potion;
+$button-purple:    $purple-potion;
+
+
+/* ==========================================================================
+   %% Media Query Variables %%
+   ========================================================================== */
+
+// small range (0px --> 640px) ==> Good for mobile devices
+$sm-start:   0px;
+$sm-end:     640px;
+
+// medium range (640px --> 1024px) ==> Good for tablet devices
+$md-start:  640px;
+$md-end:    1024px;
+
+// large range (1025px --> 1440px) ==> Good for portable & laptop devices
+$lg-start:   1025px;
+$lg-end:     1440px;
+
+// xlarge range (1441px --> 1992px)  ==> Good for large screens & desktop
+$xl-start:  90.1441px;
+$xl-end:    1992px;
+
+// jumbo range (1993px --> up)  ==> Good for everything above large screens & desktop
+$jumbo-start:  1993px;
+
+// Always declare site background fallback
+$site-background: $white;
+
+
+/* ==========================================================================
+   %% Form Variables %%
+   ========================================================================== */
+
+$form-focus: $xlight-gray;
+
+
+// If you have to support IE8
+$support-legacy: true;

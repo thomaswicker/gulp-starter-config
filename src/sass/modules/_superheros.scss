@@ -1,0 +1,288 @@
+/*
+  ____  _   _ ____  _____ ____  _   _ _____ ____   ___  ____
+ / ___|| | | |  _ \| ____|  _ \| | | | ____|  _ \ / _ \/ ___|
+ \___ \| | | | |_) |  _| | |_) | |_| |  _| | |_) | | | \___ \
+  ___) | |_| |  __/| |___|  _ <|  _  | |___|  _ <| |_| |___) |
+ |____/ \___/|_|   |_____|_| \_\_| |_|_____|_| \_\\___/|____/
+
+*/
+
+/* ==========================================================================
+   %% Styling for Hero/Superhero %%
+   ========================================================================== */
+
+.superhero {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 300px;
+  background-size: cover;
+
+  @include mq(sm) {
+    margin-top: 40px;
+    background-position-x: -1200px;
+  }
+
+  &.short {
+    min-height: 200px;
+  }
+
+  &.normal {
+    min-height: 350px;
+  }
+
+  &.tall {
+    min-height: 500px;
+  }
+
+  .sh--inner {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: $xl-end;
+    min-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+      left: 3%;
+      right: 3%;
+      width: 94%;
+    }
+
+    @include mq(md) {
+      left: 0;
+      right: 0;
+      width: 100%;
+    }
+
+    @include mq(sm) {
+      min-height: 350px;
+      padding-bottom: 50px;
+      text-align: center;
+    }
+
+    .my-pic {
+      float: left;
+      width: 250px;
+
+      img {
+        position: relative;
+        top: 30px;
+        left: 50px;
+        max-width: 170px !important;
+        padding-top: $unit-base;
+        text-align: right;
+      }
+
+      @include mq(md) {
+        float: left;
+        width: 250px;
+      }
+
+      @include mq(sm) {
+        float: left;
+        width: 100%;
+        text-align: center;
+
+        img {
+          position: static;
+          max-width: 170px !important;
+          padding-top: $unit-base;
+          padding-bottom: $unit-base;
+          text-align: center;
+        }
+      }
+    }
+
+    .my-info {
+      float: left;
+      width: calc(100% - 250px);
+      text-align: left;
+      padding: 85px 100px 0 $unit-base;
+
+      @include mq(xl) {
+        padding: 80px 100px 0 $unit-base;
+      }
+
+      @include mq(lg) {
+        padding: 60px 100px $unit-md $unit-base;
+      }
+
+      @include mq(md) {
+        width: calc(100% - 250px);
+        padding: 65px 30px $unit-md $unit-base;
+      }
+
+      @include mq(sm) {
+        width: 100%;
+        padding: $unit-xxs $unit-lg $unit-lg $unit-lg;
+        text-align: center;
+      }
+
+      h1 {
+        float: left;
+        width: 100%;
+        font-family: $font-1;
+        font-size: $h1-size;
+        font-weight: 200;
+        color: white;
+
+        @include mq(md) {
+          font-size: 35px;
+          font-weight: 400;
+        }
+
+        @include mq(sm) {
+          font-size: 32px;
+          font-weight: 500;
+        }
+      }
+
+      h2 {
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        font-family: $font-1;
+        font-size: 24px;
+        font-weight: 400;
+        color: $color-primary;
+        line-height: 130%;
+
+        @include mq(lg) {
+          font-size: 24px;
+        }
+
+        @include mq(md) {
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        @include mq(sm) {
+          font-size: 17px;
+          font-weight: 500;
+        }
+      }
+
+      p.quote {
+        float: left;
+        width: 100%;
+        max-width: 1400px;
+        font-family: $font-2;
+        font-size: 19px;
+        color: white;
+        line-height: 140%;
+
+        @include mq(md) {
+          font-size: 17px;
+        }
+
+        @include mq(sm) {
+          font-size: 17px;
+        }
+      }
+
+      p.quotee {
+        float: left;
+        width: 100%;
+        margin-top: $unit-base;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 500;
+        color: $color-primary;
+
+        @include mq(md) {
+          font-size: 19px;
+        }
+
+        @include mq(sm) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &.superhero-home {
+    background-image: url("../img/superheroes/bg-code-home.jpg");
+
+    p.quotee {
+      color: $color-primary !important;
+    }
+  }
+
+  &.superhero-about {
+    background-image: url("../img/superheroes/bg-code-about.jpg");
+
+    p.quotee {
+      color: $purple-potion !important;
+    }
+  }
+
+  &.superhero-blog {
+    background-image: url("../img/superheroes/bg-code-blog.jpg");
+
+    p.quotee {
+      color: teal !important;
+    }
+  }
+
+  &.superhero-portfolio {
+    background-image: url("../img/superheroes/bg-code-portfolio.jpg");
+
+    p.quotee {
+      color: $purple-potion !important;
+    }
+  }
+
+  &.superhero-photography {
+    background-image: url("../img/superheroes/bg-code-photography.jpg");
+
+    @include mq(sm) {
+      background-position-x: -800px;
+    }
+
+    p.quotee {
+      color: $red-potion !important;
+    }
+  }
+
+  &.superhero-culinary {
+    background-image: url("../img/superheroes/bg-code-culinary.jpg");
+
+    @include mq(sm) {
+      background-position-x: -1600px;
+    }
+
+    p.quotee {
+      color: $green-potion !important;
+    }
+  }
+
+  &.superhero-resume {
+    background-image: url("../img/superheroes/bg-code-resume.jpg");
+
+    @include mq(sm) {
+      background-position-x: -1600px;
+    }
+
+    p.quotee {
+      color: $orange-potion !important;
+    }
+  }
+
+  &.superhero-contact {
+    background-image: url("../img/superheroes/bg-code-contact.jpg");
+
+    @include mq(sm) {
+      background-position-x: -800px;
+    }
+
+    p.quotee {
+      color: $yellow-potion !important;
+    }
+  }
+}
